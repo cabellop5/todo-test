@@ -1,0 +1,37 @@
+### Create todo
+POST http://localhost:3000
+Content-Type: application/json
+
+{
+  "message": "this is a message",
+  "label": "0003",
+  "dueDate": "2023-09-08 12:12:12"
+}
+
+
+### Update todo
+PUT http://localhost:3000
+Content-Type: application/json
+
+{
+  "id": "50fa217e-01e9-405e-8dea-f3b2499b8580",
+  "message": "this is a other message",
+  "label": "0002",
+  "dueDate": "2023-09-08 12:12:13"
+}
+
+
+### Get by id todo
+GET http://localhost:3000/50fa217e-01e9-405e-8dea-f3b2499b8580
+Content-Type: application/json
+
+
+### Get all todo
+GET http://localhost:3000/
+Content-Type: application/json
+
+
+### Delete todo
+DELETE http://localhost:3000/50fa217e-01e9-405e-8dea-f3b2499b8580
+
+

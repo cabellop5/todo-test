@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+  pgsql:
+    platform: linux/amd64
+    build:
+      context: etc/database/
+    container_name: todo-test-pgsql
+    environment:
+      POSTGRES_PASSWORD: pass
+      POSTGRES_USER: admin
+      POSTGRES_DATABASES: todo-test
+    volumes:
+      - pgsql-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+    pgsql-data:
+      driver: local
